@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navbar start -->
+    <nav>
+        <!-- logo -->
+        <div class="logo">
+            <img src="logo.png" alt="TM" />
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li>
+                <a href="#">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Reminder</a></li>
+                        <li><a href="#">Calender</a></li>
+                        <li><a href="#">Team Collaboration</a></li>
+                        <li><a href="#">Projects</a></li>
+                    </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- navbar end -->
+
+    <div class="container">
+      <!-- left -->
+        <aside>
+            <div class="sidebar">
+                <a href="index.html">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="add_task.html">
+                    <span class="material-symbols-outlined">add</span>
+                    <h3>Add Task</h3>
+                </a>
+
+                <a href="del_task.html">
+                    <span class="material-symbols-outlined">delete</span>
+                    <h3>Delete Task</h3>
+                </a>
+
+                <a href="edit_task.html">
+                    <span class="material-symbols-outlined">edit</span>
+                    <h3>Edit Task</h3>
+                </a>
+
+                <a href="msg.html">
+                    <span class="material-symbols-outlined">mail_outline</span>
+                    <h3>Messages</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">settings</span>
+                    <h3>Settings</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+            <!-- end of sidebar -->
+        </aside>
+        <!-- left end -->
+
+        <!-- main -->
+        <main>
+            <h1>Dashboard</h1>
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <!-- three containers -->
+            <div class="middle-boxes">
+                <div id="box" class="main_task">
+                    <h2>Main Tasks</h2>
+                    <ol id="mainTaskList"></ol>
+                </div>
+                <div id="box" class="deleted_task">
+                    <h2>Deleted Tasks</h2>
+                    <ol id="deletedTaskList"></ol>
+                </div>
+                <div id="box" class="edited_task">
+                    <h2>Edited Tasks</h2>
+                    <ol id="editedTaskList"></ol>
+                </div>
+            </div>
+
+            <!-- end box start -->
+            <div class="endBoxes">
+
+                <div class="end-box">
+                    <h2>Mark Task as Complete</h2>
+                    <ul id="completeTaskList"></ul>
+                </div>
+                
+                <div class="end-box2">
+                    <h2>Completed Tasks</h2>
+                    <ul id="completedTaskList"></ul>
+                </div>
+
+            </div>
+            <!-- end-box end -->
+        </main>
+        <!-- main end -->
+
+        <!-- right -->
+        <div class="right">
+            <!-- user icon -->
+            <div class="user-icon">
+                <img src="user-icon.png" />
+            </div>
+            
+             <div class="username">User</div>
+            
+              <div class="user-benefits">
+                <h3>✨ User Benefits</h3>
+                <ul>
+                    <li>✅ Organize all your tasks in one place</li>
+                    <li>⏰ Get smart reminders & notifications</li>
+                    <li>📆 Plan your day with calendar view</li>
+                    <li>👥 Collaborate with your team</li>
+                    <li>📊 Track project progress visually</li>
+                    <li>🔒 Secure & private task management</li>
+                </ul>
+            </div>
+            
+
+           
+   
+
+    <script src="script.js"></script>
+
+  </body>
+</html>

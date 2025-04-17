@@ -1,0 +1,391 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    list-style: none;
+    appearance: none;
+}
+body{
+    font-family: 'poppins';
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.88rem;
+    user-select: none;
+    background-color:#e1bee7;
+}
+
+.container{
+    display: grid;
+    width: 100%;
+    gap:1.8rem;
+    grid-template-columns: 14rem auto 14rem;
+    grid-template-rows: auto ;
+    margin: 0 auto;
+}
+
+a{
+    color:black;
+}
+h1{
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 0.87rem;
+}
+h4{
+    font-size: 0.8;
+}
+h5{
+    font-size: 0.77rem;
+}
+small{
+    font-size: 0.75rem;
+}
+
+.profilephoto{
+    border-radius: 50%;
+    width: 2.8rem;
+    height: 2.8rem;
+    overflow: hidden;
+}
+/* -----------------------------------------------------------navbar-------------------------------------------------------- */
+nav{
+    background-color:#444;
+    padding:7px 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;   
+}
+nav .logo{
+    width: 3rem;
+    height: 3rem;
+}
+nav .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+nav ul{
+    display: flex;
+    justify-content: right;
+}
+nav ul li{
+    margin: 0px 15px;
+    position: relative;
+}
+nav ul li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 0px;
+    transition:0.2s  ease;
+    border-bottom: 2px solid transparent;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color:#e1bee7;
+    border-bottom: 2px solid gray;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background:gray;
+    list-style:circle;
+    padding: 10px;
+    z-index: 1000;
+    width: auto;
+    border-radius: 5px;
+}
+
+nav ul li .dropdown a:hover{
+    color:black;
+    text-decoration: underline;
+}
+nav ul li:hover .dropdown {
+    display:block ;
+   
+}
+.dropdown li {
+    padding: 5px 0;
+}
+
+/* ----------------------------------------------------------------left side---------------------------------------------------------- */
+
+aside{
+    height: 100vh;
+}
+
+/* ---------------------------------------------------------sidebar-------------------------------------------------------------------- */
+
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 85vh;
+    position: relative;
+    top:1rem;
+}
+
+aside .sidebar a{
+    display:flex;
+    align-items: center;
+    margin-left: 2rem;
+    gap: 1rem;
+    height: 3.2rem;
+    transition: all 0.1s ease-in;
+}
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom:1rem;
+    width: 100%;
+}
+
+ 
+
+aside .sidebar a:hover{
+    background-color: rgb(240, 225, 240);
+    color: purple;
+    margin-left:0;
+    border-left: 5px solid purple;
+}
+
+
+/* -------------------------------------------------------------main---------------------------------------------------------- */
+
+main h1{
+    margin-top: 2.5rem;
+    font-weight: bold;
+    font-size: 50px;
+}
+main .date input{
+    height: 2rem;
+    width: auto;
+    border-radius: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 4px;
+    font-weight: 500;
+}
+
+/* Middle Boxes start */
+
+main .middle-boxes{
+    display: flex;
+    height: 30vh;
+    width: auto;
+    padding-left: 2%;
+    margin-top: 2rem;
+}
+
+main .middle-boxes #box{
+    border-radius: 30px;
+    box-shadow:3px 3px 10px gray;
+    width: 30%;
+    margin-right: 5%;
+    background-color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scrollbar-color: transparent;
+    scrollbar-width: none;
+}
+
+main .middle-boxes #box h2{
+    text-align: center;
+}
+
+main .middle-boxes #box ol{
+    padding: 10px 5px;
+    font-size: medium;
+    
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.deleted-task-item {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding-left: 8px;
+}
+
+main .middle-boxes .deleted_task #deletedTaskList{
+    padding: 2px;
+    
+}
+
+.restore-btn{
+    background-color: #ff9800; 
+    color: white;
+    border: none;
+    padding-right: 5px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 1.5px;
+    padding-left: 1px;
+}
+
+.restore-btn:hover {
+    background-color: #e68900;
+}
+
+/* Middle Boxes end */
+
+/* End boxes start */
+
+main .endBoxes{
+    display: flex;
+    width: 100%;
+    height: 40%;
+}
+main .endBoxes .end-box {
+    margin:2%;
+    margin-top: 5%;
+    padding-right: 2%;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px gray;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+
+.end-box2{
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    padding-right: 2%;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px gray;
+    margin-top: 5%;
+}
+
+.end-box li,.end-box2 li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  margin-bottom: 5px;
+  font-size: medium;
+}
+
+.end-box h2,.end-box2 h2{
+    text-align: center;
+}
+
+.end-box ul,.end-box2 ul{
+    padding: 5px;
+}
+
+.complete-btn {
+  padding: 6px 12px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.complete-btn:hover {
+  background-color: #1e8449;
+}
+ 
+.reopen-btn{
+    padding: 5px 10px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+.reopen-btn:hover{
+    background-color: #e67e22;
+} 
+
+/* end boxes end */
+
+/* ----------------------------------------------------------right-------------------------------------------------- */
+
+.right{
+    margin-top: 1rem;
+    background-color: white;
+    height: 85vh;
+}
+
+.right .user-icon{
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 30%;
+    margin-top: 8px;
+}
+
+.right .user-icon img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right .username{
+    font-size: 30px;
+    font-weight: 500;
+    margin-left: 40%;
+}
+.user-benefits {
+    background:rgb(235, 225, 235);
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 15px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.user-benefits h3 {
+    margin-bottom: 10px;
+    color:black;
+    font-size: 18px;
+    text-align: center;
+}
+
+.user-benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #1b5e20;
+}
+
+.user-benefits ul li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+/* footer */
+footer{
+    width: 100%;
+    bottom: 0;
+    background-color: black;
+    color:white;
+}
